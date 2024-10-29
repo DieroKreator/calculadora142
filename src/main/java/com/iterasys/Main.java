@@ -10,6 +10,8 @@ public class Main {
     // 2.2 Métodos e Funções
     public static void main(String[] args) {
         System.out.println("Hello world!");
+        // float resultado = somar(5,7);
+        // System.out.println("A soma de 5 + 7 = " + resultado);
     }
 
     public static float somar(float num1, float num2) {
