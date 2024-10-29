@@ -21,7 +21,7 @@ public class Main {
     }
 
     public static float subtrair(float num1, float num2) {
-        float resultado = num1 + num2;
+        float resultado = num1 - num2;
         System.out.println("Subtracao de " + num1 + " - " + num2 + " = " + resultado);  
         return resultado;
     }
@@ -41,7 +41,7 @@ public class Main {
         }
     }
 
-    public static String dividirTry(float num1, float num2){
+    public static String dividirTry(int num1, int num2){
         try {
             return String.valueOf(num1 / num2);
         } catch (Exception e) {
