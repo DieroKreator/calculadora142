@@ -2,6 +2,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import com.iterasys.Main;
@@ -85,6 +86,8 @@ public class testeCalculadora {
         assertEquals(resultadoEsperado, resulatadoAtual);
     }
 
+    @ParameterizedTest
+    @CsvFileSource(resources = "csv/somar.csv", numLinesToSkip = 1, delimiter = ',')
     public void testeSomarCSV(float num1, float num2, float resultadoEsperado){
         // Os dados de entrada sao lidos da massa de teste acima
         float resulatadoAtual = Main.somar(num1, num2);
