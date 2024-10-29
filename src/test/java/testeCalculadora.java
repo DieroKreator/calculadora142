@@ -1,6 +1,8 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import com.iterasys.Main;
 
@@ -62,6 +64,23 @@ public class testeCalculadora {
         String resultadoEsperado = "Não é possível dividir por zero";
 
         String resulatadoAtual = Main.dividirTry(num1, num2);
+
+        assertEquals(resultadoEsperado, resulatadoAtual);
+    }
+
+    // DDT
+    // Teste com massa
+
+    @ParameterizedTest
+    @CsvSource(value = {
+        "15, 25, 40.0",
+        "0, 12, 12.0",
+        "-5, 9, 4.0",
+        "0.5, 3.7, 4.2"
+    }, delimiter = ',')
+    public void testeSomarTDD(float num1, float num2, float resultadoEsperado){
+        // Os dados de entrada sao lidos da massa de teste acima
+        float resulatadoAtual = Main.somar(num1, num2);
 
         assertEquals(resultadoEsperado, resulatadoAtual);
     }
