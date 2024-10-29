@@ -28,7 +28,22 @@ public class Main {
         return num1 * num2;
     }
 
-    public static float dividir(float num1, float num2) {
-        return num1 / num2;
+    public static float dividirIF(float num1, float num2) {
+
+        if (num2 != 0) {
+            return num1 / num2;
+        } 
+        else {
+            System.out.println("Não é possível dividir por zero");
+            return 0;
+        }
+    }
+
+    public static String dividirTry(float num1, float num2){
+        try {
+            return String.valueOf(num1 / num2);
+        } catch (Exception e) {
+            return "Não é possível dividir por zero";
+        }
     }
 }
