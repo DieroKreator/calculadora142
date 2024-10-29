@@ -84,4 +84,11 @@ public class testeCalculadora {
 
         assertEquals(resultadoEsperado, resulatadoAtual);
     }
+
+    public void testeSomarCSV(float num1, float num2, float resultadoEsperado){
+        // Os dados de entrada sao lidos da massa de teste acima
+        float resulatadoAtual = Main.somar(num1, num2);
+
+        assertEquals(resultadoEsperado, resulatadoAtual);
+    }
 }
